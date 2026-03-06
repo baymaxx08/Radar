@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "total_samples": 3124,
+    "full_exposure_count": 866,
+    "partial_exposure_count": 2258,
+    "overall_accuracy_percent": 91.77336747759283
+  },
+  "file_predictions": {
+    "202503019_GH_exposed_corn_ear_cls001.csv": {
+      "predicted_exposure": "Full Exposure",
+      "true_exposure": "Full Exposure",
+      "num_samples": 387,
+      "match": "\u2713 MATCH"
+    },
+    "202503019_GH_exposed_corn_ear_far002.csv": {
+      "predicted_exposure": "Full Exposure",
+      "true_exposure": "Full Exposure",
+      "num_samples": 694,
+      "match": "\u2713 MATCH"
+    },
+    "202503019_GH_hidden_corn_ear_cls005.csv": {
+      "predicted_exposure": "Partial Exposure",
+      "true_exposure": "Partial Exposure",
+      "num_samples": 466,
+      "match": "\u2713 MATCH"
+    },
+    "202503019_GH_hidden_corn_ear_far004.csv": {
+      "predicted_exposure": "Partial Exposure",
+      "true_exposure": "Partial Exposure",
+      "num_samples": 577,
+      "match": "\u2713 MATCH"
+    },
+    "202503019_GH_stock_cls006.csv": {
+      "predicted_exposure": "Partial Exposure",
+      "true_exposure": "Partial Exposure",
+      "num_samples": 466,
+      "match": "\u2713 MATCH"
+    },
+    "202503019_GH_stock_far007.csv": {
+      "predicted_exposure": "Partial Exposure",
+      "true_exposure": "Partial Exposure",
+      "num_samples": 534,
+      "match": "\u2713 MATCH"
+    }
+  },
+  "top_features": {
+    "feature": "energy",
+    "interpretation": "High energy = Full Exposure, Low energy = Partial Exposure"
+  }
+}

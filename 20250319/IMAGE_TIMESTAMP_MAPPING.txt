@@ -1,0 +1,101 @@
+====================================================================================================
+PHOTO TO TIMESTAMP MAPPING - CORN COB CLASSIFICATION PROJECT
+====================================================================================================
+
+Project: Corn Cob Classification System
+Data Collection Date: 2025-03-19
+Image File Timestamps: All 2026-02-19 20:46:18
+Note: Images appear to have been copied/saved on 2026-02-19. EXIF metadata not available. Mapping based on sequential order and CSV file structure.
+
+----------------------------------------------------------------------------------------------------
+TIMELINE OF RADAR SCANS
+----------------------------------------------------------------------------------------------------
+
+📊 2025-03-19 20:57:55.750
+   File: 202503019_GH_exposed_corn_ear_cls001.csv
+   Type: Exposed Corn Ear - Close Shot
+   Duration: ~~16-19 seconds
+
+📊 2025-03-19 21:01:05.840
+   File: 202503019_GH_exposed_corn_ear_far002.csv
+   Type: Exposed Corn Ear - Far Shot
+   Duration: ~~16-19 seconds
+
+📊 2025-03-19 21:06:00.316
+   File: 202503019_GH_hidden_corn_ear_far004.csv
+   Type: Hidden Corn Ear - Far Shot
+   Duration: ~~16-19 seconds
+
+📊 2025-03-19 21:07:02.931
+   File: 202503019_GH_hidden_corn_ear_cls005.csv
+   Type: Hidden Corn Ear - Close Shot
+   Duration: ~~16-19 seconds
+
+📊 2025-03-19 21:09:14.198
+   File: 202503019_GH_stock_cls006.csv
+   Type: Stock (No Cob) - Close Shot
+   Duration: ~~16-19 seconds
+
+📊 2025-03-19 21:12:15.456
+   File: 202503019_GH_stock_far007.csv
+   Type: Stock (No Cob) - Far Shot
+   Duration: ~~16-19 seconds
+
+----------------------------------------------------------------------------------------------------
+PHOTO TO DATA MAPPING
+----------------------------------------------------------------------------------------------------
+
+📷 Image #1: Image (5).jpg
+   Status: Image found
+   Corresponding Data: 202503019_GH_exposed_corn_ear_cls001.csv
+   Data Type: Exposed Corn Ear - Close Shot
+   Category: exposed
+   Distance: close
+   Scan Time: 2025-03-19 20:57:55.750 to 2025-03-19 20:58:11.663
+   Records: 391
+
+📷 Image #2: Image (6).jpg
+   Status: Image found
+   Corresponding Data: 202503019_GH_exposed_corn_ear_far002.csv
+   Data Type: Exposed Corn Ear - Far Shot
+   Category: exposed
+   Distance: far
+   Scan Time: 2025-03-19 21:01:05.840 to 2025-03-19 21:01:34.023
+   Records: 707
+
+📷 Image #3: Image (7).jpg
+   Status: Image found
+   Corresponding Data: 202503019_GH_hidden_corn_ear_far004.csv
+   Data Type: Hidden Corn Ear - Far Shot
+   Category: hidden
+   Distance: far
+   Scan Time: 2025-03-19 21:06:00.316 to 2025-03-19 21:06:23.802
+   Records: 590
+
+📷 Image #4: Image (8).jpg
+   Status: Image found
+   Corresponding Data: 202503019_GH_hidden_corn_ear_cls005.csv
+   Data Type: Hidden Corn Ear - Close Shot
+   Category: hidden
+   Distance: close
+   Scan Time: 2025-03-19 21:07:02.931 to 2025-03-19 21:07:21.787
+   Records: 479
+
+📷 Image #5: Image (9).jpg
+   Status: Image found
+   Corresponding Data: 202503019_GH_stock_cls006.csv
+   Data Type: Stock (No Cob) - Close Shot
+   Category: stock
+   Distance: close
+   Scan Time: 2025-03-19 21:09:14.198 to 2025-03-19 21:09:33.331
+   Records: 475
+
+📷 Image #6: Image (11).jpg
+   Status: Image found
+   Corresponding Data: 202503019_GH_stock_far007.csv
+   Data Type: Stock (No Cob) - Far Shot
+   Category: stock
+   Distance: far
+   Scan Time: 2025-03-19 21:12:15.456 to 2025-03-19 21:12:36.349
+   Records: 552
+

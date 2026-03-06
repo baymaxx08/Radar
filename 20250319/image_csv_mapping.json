@@ -1,0 +1,170 @@
+{
+  "project": "Corn Cob Classification System",
+  "date": "2025-03-19",
+  "image_file_timestamp": "2026-02-19 20:46:18",
+  "note": "Images appear to have been copied/saved on 2026-02-19. EXIF metadata not available. Mapping based on sequential order and CSV file structure.",
+  "total_images": 6,
+  "total_csv_files": 6,
+  "image_to_data_mapping": [
+    {
+      "image": "Image (5).jpg",
+      "image_check": "Image found",
+      "csv_file": "202503019_GH_exposed_corn_ear_cls001.csv",
+      "data_type": "Exposed Corn Ear - Close Shot",
+      "category": "exposed",
+      "distance": "close",
+      "scan_start_time": "2025-03-19 20:57:55.750",
+      "scan_end_time": "2025-03-19 20:58:11.663",
+      "num_records": 391,
+      "sequence_number": 1
+    },
+    {
+      "image": "Image (6).jpg",
+      "image_check": "Image found",
+      "csv_file": "202503019_GH_exposed_corn_ear_far002.csv",
+      "data_type": "Exposed Corn Ear - Far Shot",
+      "category": "exposed",
+      "distance": "far",
+      "scan_start_time": "2025-03-19 21:01:05.840",
+      "scan_end_time": "2025-03-19 21:01:34.023",
+      "num_records": 707,
+      "sequence_number": 2
+    },
+    {
+      "image": "Image (7).jpg",
+      "image_check": "Image found",
+      "csv_file": "202503019_GH_hidden_corn_ear_far004.csv",
+      "data_type": "Hidden Corn Ear - Far Shot",
+      "category": "hidden",
+      "distance": "far",
+      "scan_start_time": "2025-03-19 21:06:00.316",
+      "scan_end_time": "2025-03-19 21:06:23.802",
+      "num_records": 590,
+      "sequence_number": 3
+    },
+    {
+      "image": "Image (8).jpg",
+      "image_check": "Image found",
+      "csv_file": "202503019_GH_hidden_corn_ear_cls005.csv",
+      "data_type": "Hidden Corn Ear - Close Shot",
+      "category": "hidden",
+      "distance": "close",
+      "scan_start_time": "2025-03-19 21:07:02.931",
+      "scan_end_time": "2025-03-19 21:07:21.787",
+      "num_records": 479,
+      "sequence_number": 4
+    },
+    {
+      "image": "Image (9).jpg",
+      "image_check": "Image found",
+      "csv_file": "202503019_GH_stock_cls006.csv",
+      "data_type": "Stock (No Cob) - Close Shot",
+      "category": "stock",
+      "distance": "close",
+      "scan_start_time": "2025-03-19 21:09:14.198",
+      "scan_end_time": "2025-03-19 21:09:33.331",
+      "num_records": 475,
+      "sequence_number": 5
+    },
+    {
+      "image": "Image (11).jpg",
+      "image_check": "Image found",
+      "csv_file": "202503019_GH_stock_far007.csv",
+      "data_type": "Stock (No Cob) - Far Shot",
+      "category": "stock",
+      "distance": "far",
+      "scan_start_time": "2025-03-19 21:12:15.456",
+      "scan_end_time": "2025-03-19 21:12:36.349",
+      "num_records": 552,
+      "sequence_number": 6
+    }
+  ],
+  "csv_data_summary": {
+    "202503019_GH_exposed_corn_ear_cls001.csv": {
+      "type": "Exposed Corn Ear - Close Shot",
+      "category": "exposed",
+      "distance": "close",
+      "start_time": "2025-03-19 20:57:55.750",
+      "end_time": "2025-03-19 20:58:11.663",
+      "records": 391
+    },
+    "202503019_GH_exposed_corn_ear_far002.csv": {
+      "type": "Exposed Corn Ear - Far Shot",
+      "category": "exposed",
+      "distance": "far",
+      "start_time": "2025-03-19 21:01:05.840",
+      "end_time": "2025-03-19 21:01:34.023",
+      "records": 707
+    },
+    "202503019_GH_hidden_corn_ear_far004.csv": {
+      "type": "Hidden Corn Ear - Far Shot",
+      "category": "hidden",
+      "distance": "far",
+      "start_time": "2025-03-19 21:06:00.316",
+      "end_time": "2025-03-19 21:06:23.802",
+      "records": 590
+    },
+    "202503019_GH_hidden_corn_ear_cls005.csv": {
+      "type": "Hidden Corn Ear - Close Shot",
+      "category": "hidden",
+      "distance": "close",
+      "start_time": "2025-03-19 21:07:02.931",
+      "end_time": "2025-03-19 21:07:21.787",
+      "records": 479
+    },
+    "202503019_GH_stock_cls006.csv": {
+      "type": "Stock (No Cob) - Close Shot",
+      "category": "stock",
+      "distance": "close",
+      "start_time": "2025-03-19 21:09:14.198",
+      "end_time": "2025-03-19 21:09:33.331",
+      "records": 475
+    },
+    "202503019_GH_stock_far007.csv": {
+      "type": "Stock (No Cob) - Far Shot",
+      "category": "stock",
+      "distance": "far",
+      "start_time": "2025-03-19 21:12:15.456",
+      "end_time": "2025-03-19 21:12:36.349",
+      "records": 552
+    }
+  },
+  "timeline": [
+    {
+      "time": "2025-03-19 20:57:55.750",
+      "file": "202503019_GH_exposed_corn_ear_cls001.csv",
+      "type": "Exposed Corn Ear - Close Shot",
+      "duration": "~16-19 seconds"
+    },
+    {
+      "time": "2025-03-19 21:01:05.840",
+      "file": "202503019_GH_exposed_corn_ear_far002.csv",
+      "type": "Exposed Corn Ear - Far Shot",
+      "duration": "~16-19 seconds"
+    },
+    {
+      "time": "2025-03-19 21:06:00.316",
+      "file": "202503019_GH_hidden_corn_ear_far004.csv",
+      "type": "Hidden Corn Ear - Far Shot",
+      "duration": "~16-19 seconds"
+    },
+    {
+      "time": "2025-03-19 21:07:02.931",
+      "file": "202503019_GH_hidden_corn_ear_cls005.csv",
+      "type": "Hidden Corn Ear - Close Shot",
+      "duration": "~16-19 seconds"
+    },
+    {
+      "time": "2025-03-19 21:09:14.198",
+      "file": "202503019_GH_stock_cls006.csv",
+      "type": "Stock (No Cob) - Close Shot",
+      "duration": "~16-19 seconds"
+    },
+    {
+      "time": "2025-03-19 21:12:15.456",
+      "file": "202503019_GH_stock_far007.csv",
+      "type": "Stock (No Cob) - Far Shot",
+      "duration": "~16-19 seconds"
+    }
+  ]
+}

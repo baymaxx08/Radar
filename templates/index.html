@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corn Cob Classification - Neural Network</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            animation: slideDown 0.6s ease-out;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+        
+        input[type="file"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: 'Courier New', monospace;
+            transition: all 0.3s;
+        }
+        
+        input[type="file"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+            font-size: 0.9em;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .status {
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-size: 0.95em;
+        }
+        
+        .status.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .status.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .status.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        
+        .status.warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .results {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .results.active {
+            display: block;
+        }
+        
+        .result-item {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .confidence {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .probability-chart {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .probability-bar {
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+        
+        .probability-label {
+            color: #555;
+            margin-bottom: 2px;
+            font-weight: 500;
+        }
+        
+        .probability-fill {
+            height: 20px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .probability-value {
+            position: absolute;
+            right: 8px;
+            top: 2px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.85em;
+        }
+        
+        .summary-stats {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .stat-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .stat-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-row {
+                grid-template-columns: 1fr;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+        
+        .model-info {
+            background: #f0f4ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .class-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+        
+        .class-1 { background: #667eea; }
+        .class-2 { background: #764ba2; }
+        .class-3 { background: #f093fb; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌽 Corn Cob Classification System</h1>
+            <p>Advanced Neural Network-based Radar Data Analysis</p>
+        </header>
+        
+        <div class="main-content">
+            <!-- Left Column: CSV Upload and Analysis -->
+            <div class="card">
+                <h2>📊 Analyze CSV File</h2>
+                
+                <div class="model-info">
+                    <strong>Model Status:</strong> <span id="model-status">Not trained</span><br>
+                    <span class="class-dot class-1"></span>Full Corn Cob (Bare)<br>
+                    <span class="class-dot class-2"></span>Partial Corn Cob (Hidden)<br>
+                    <span class="class-dot class-3"></span>No Cob (Stock)
+                </div>
+                
+                <div class="section">
+                    <h3>Train Model</h3>
+                    <p style="color: #666; margin-bottom: 10px; font-size: 0.9em;">
+                        Train the neural network on 3000+ radar scans. Takes about 30-45 seconds.
+                    </p>
+                    <button onclick="trainModel()" id="train-btn">Train Model</button>
+                    <div id="train-status" class="status" style="display: none;"></div>
+                </div>
+                
+                <div class="section">
+                    <h3>Analyze CSV File</h3>
+                    <p style="color: #666; margin-bottom: 10px; font-size: 0.9em;">
+                        Upload a CSV radar data file to classify multiple scans
+                    </p>
+                    <div class="form-group">
+                        <label for="csv-file">Select CSV File:</label>
+                        <input type="file" id="csv-file" accept=".csv">
+                    </div>
+                    <button onclick="analyzeCSV()" id="analyze-btn" disabled>Analyze File</button>
+                </div>
+                
+                <div id="csv-status" class="status" style="display: none;"></div>
+            </div>
+        </div>
+        
+        <!-- Results Section -->
+        <div class="card">
+            <h2>📈 Results</h2>
+            <div id="results" class="results"></div>
+            <div id="summary-stats" class="summary-stats" style="display: none;"></div>
+        </div>
+    </div>
+    
+    <script>
+        // Check model status on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            checkModelStatus();
+            // Auto-update status every 5 seconds
+            setInterval(checkModelStatus, 5000);
+        });
+        
+        function checkModelStatus() {
+            fetch('/api/status')
+                .then(response => response.json())
+                .then(data => {
+                    const statusEl = document.getElementById('model-status');
+                    if (data.model_trained) {
+                        statusEl.innerHTML = '<span style="color: green;">✓ Model Ready</span>';
+                        document.getElementById('analyze-btn').disabled = false;
+                        document.getElementById('train-btn').disabled = false;
+                    } else {
+                        statusEl.innerHTML = '<span style="color: orange;">⊘ Not Trained yet</span>';
+                        document.getElementById('analyze-btn').disabled = true;
+                        document.getElementById('train-btn').disabled = false;
+                    }
+                })
+                .catch(error => {
+                    console.error('Status check failed:', error);
+                    document.getElementById('model-status').innerHTML = '<span style="color: red;">✗ Error checking status</span>';
+                });
+        }
+        
+        function showStatus(elementId, message, type = 'info') {
+            const el = document.getElementById(elementId);
+            el.innerHTML = message;
+            el.className = 'status ' + type;
+            el.style.display = 'block';
+        }
+        
+        function hideStatus(elementId) {
+            const el = document.getElementById(elementId);
+            el.style.display = 'none';
+        }
+        
+        function trainModel() {
+            showStatus('train-status', '<div class="spinner"></div>Training model on 3000+ radar scans (30-45 seconds)...', 'info');
+            document.getElementById('train-btn').disabled = true;
+            
+            fetch('/api/train', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    showStatus('train-status', data.message, 'success');
+                    document.getElementById('analyze-btn').disabled = false;
+                    checkModelStatus();
+                } else {
+                    showStatus('train-status', 'Error: ' + (data.message || 'Unknown error'), 'error');
+                    document.getElementById('train-btn').disabled = false;
+                }
+            })
+            .catch(error => {
+                showStatus('train-status', 'Error: ' + error.message, 'error');
+                document.getElementById('train-btn').disabled = false;
+            });
+        }
+        
+        function analyzeCSV() {
+            const fileInput = document.getElementById('csv-file');
+            if (!fileInput.files.length) {
+                showStatus('csv-status', 'Please select a file', 'error');
+                return;
+            }
+            
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+            
+            showStatus('csv-status', '<div class="spinner"></div>Analyzing file...', 'info');
+            
+            fetch('/api/analyze-csv', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    displayResults(data.predictions, data.summary);
+                    showStatus('csv-status', `✓ Successfully analyzed ${data.scans_analyzed} scans`, 'success');
+                } else {
+                    showStatus('csv-status', 'Error: ' + (data.error || 'Unknown error'), 'error');
+                }
+            })
+            .catch(error => {
+                showStatus('csv-status', 'Error: ' + error.message, 'error');
+                console.error('CSV analysis error:', error);
+            });
+        }
+        
+        function displayResults(predictions, summary) {
+            const resultsDiv = document.getElementById('results');
+            const summaryDiv = document.getElementById('summary-stats');
+            
+            // Clear previous results
+            resultsDiv.innerHTML = '';
+            summaryDiv.innerHTML = '';
+            
+            // Display individual predictions
+            if (predictions.length === 1) {
+                // Single scan result with feature explanation
+                const pred = predictions[0];
+                const explanation = pred.explanation || {};
+                
+                let explanationHtml = '';
+                if (explanation.confidence_reasons) {
+                    explanationHtml = `
+                        <div style="background: #f0f4ff; padding: 15px; border-radius: 8px; margin-top: 15px; border-left: 4px solid #667eea;">
+                            <strong>📊 Signal Analysis:</strong><br>
+                            <div style="font-size: 0.9em; color: #555; margin-top: 10px; line-height: 1.6;">
+                                ${explanation.confidence_reasons.map(r => `<div>• ${r}</div>`).join('')}
+                            </div>
+                            <div style="margin-top: 12px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 0.85em;">
+                                <div><strong>Energy:</strong> ${explanation.signal_metrics.energy}</div>
+                                <div><strong>Peak Count:</strong> ${explanation.signal_metrics.peaks}</div>
+                                <div><strong>Variance:</strong> ${explanation.signal_metrics.variance}</div>
+                                <div><strong>Stability:</strong> ${explanation.signal_metrics.stability}</div>
+                            </div>
+                        </div>
+                    `;
+                }
+                
+                resultsDiv.innerHTML = `
+                    <div class="result-item">
+                        <strong>Classification Result:</strong><br>
+                        <h3 style="color: #667eea; margin: 10px 0;">${pred.class}</h3>
+                        <div class="confidence">Neural Network Confidence: ${(pred.confidence * 100).toFixed(2)}%</div>
+                        <div class="probability-chart">
+                            ${createProbabilityBars(pred.all_probabilities)}
+                        </div>
+                        ${explanationHtml}
+                    </div>
+                `;
+            } else {
+                // Multiple scans - show summary first
+                resultsDiv.innerHTML = `<p><strong>Showing predictions for ${predictions.length} scans:</strong></p>`;
+                predictions.slice(0, 5).forEach((pred, idx) => {
+                    const explanation = pred.explanation || {};
+                    let reasonsHtml = '';
+                    if (explanation.confidence_reasons && explanation.confidence_reasons.length > 0) {
+                        reasonsHtml = `
+                            <div style="font-size: 0.85em; color: #666; margin-top: 8px; padding-top: 8px; border-top: 1px solid #e0e0e0;">
+                                <strong>Reasons:</strong> ${explanation.confidence_reasons.slice(0, 1).join('; ')}
+                            </div>
+                        `;
+                    }
+                    
+                    resultsDiv.innerHTML += `
+                        <div class="result-item">
+                            <strong>Scan ${idx + 1}:</strong> ${pred.class}
+                            <div class="confidence">Confidence: ${(pred.confidence * 100).toFixed(2)}%</div>
+                            ${reasonsHtml}
+                        </div>
+                    `;
+                });
+                if (predictions.length > 5) {
+                    resultsDiv.innerHTML += `<p style="color: #666; margin-top: 15px;">... and ${predictions.length - 5} more scans</p>`;
+                }
+            }
+            
+            // Display summary statistics
+            if (summary) {
+                summaryDiv.style.display = 'block';
+                summaryDiv.innerHTML = `
+                    <h3 style="margin-bottom: 20px; color: #667eea;">Summary Statistics</h3>
+                    <div class="stat-row">
+                        <div class="stat-item">
+                            <div class="stat-value">${summary.class_distribution['Full Corn Cob (Bare)']}</div>
+                            <div class="stat-label">Full Cob (Bare)</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">${summary.class_distribution['Partial Corn Cob (Hidden)']}</div>
+                            <div class="stat-label">Partial Cob (Hidden)</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">${summary.class_distribution['No Cob (Stock)']}</div>
+                            <div class="stat-label">No Cob (Stock)</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #e0e0e0;">
+                        <h4 style="margin-bottom: 15px; color: #555;">Average Probabilities</h4>
+                        <div class="stat-row">
+                            <div class="stat-item">
+                                <div class="stat-value">${(summary.average_probabilities.full_corn_cob * 100).toFixed(1)}%</div>
+                                <div class="stat-label">Full Cob</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">${(summary.average_probabilities.partial_corn_cob * 100).toFixed(1)}%</div>
+                                <div class="stat-label">Partial Cob</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">${(summary.average_probabilities.no_cob * 100).toFixed(1)}%</div>
+                                <div class="stat-label">No Cob</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            resultsDiv.classList.add('active');
+        }
+        
+        function createProbabilityBars(probs) {
+            const classNames = {
+                'full_corn_cob': 'Full Corn Cob (Bare)',
+                'partial_corn_cob': 'Partial Corn Cob (Hidden)',
+                'no_cob': 'No Cob (Stock)'
+            };
+            
+            let html = '';
+            for (let key in classNames) {
+                if (probs.hasOwnProperty(key)) {
+                    const percent = Math.round(probs[key] * 100);
+                    html += `
+                        <div class="probability-bar">
+                            <div class="probability-label">${classNames[key]}</div>
+                            <div class="probability-fill" style="width: ${percent}%;">
+                                <div class="probability-value">${percent}%</div>
+                            </div>
+                        </div>
+                    `;
+                }
+            }
+            return html;
+        }
+    </script>
+</body>
+</html>

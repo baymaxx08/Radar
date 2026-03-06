@@ -1,0 +1,350 @@
+{
+  "metadata": {
+    "report_generated": "2026-03-01T16:33:13.127420",
+    "data_folder": "c:\\Users\\Siddhartha Reddy\\Desktop\\radar\\20250319",
+    "images_found": 6,
+    "csv_files_found": 6
+  },
+  "images": {
+    "Image (11).jpg": {
+      "file_path": "c:\\Users\\Siddhartha Reddy\\Desktop\\radar\\20250319\\Image (11).jpg",
+      "timestamp_readable": "2026-02-19T20:46:18.597615",
+      "timestamp_display": "2026-02-19 20:46:18",
+      "time_source": "File Modified",
+      "file_modified": "2026-02-19 20:46:18",
+      "exif_datetime": "No EXIF data"
+    },
+    "Image (5).jpg": {
+      "file_path": "c:\\Users\\Siddhartha Reddy\\Desktop\\radar\\20250319\\Image (5).jpg",
+      "timestamp_readable": "2026-02-19T20:46:18.597615",
+      "timestamp_display": "2026-02-19 20:46:18",
+      "time_source": "File Modified",
+      "file_modified": "2026-02-19 20:46:18",
+      "exif_datetime": "No EXIF data"
+    },
+    "Image (6).jpg": {
+      "file_path": "c:\\Users\\Siddhartha Reddy\\Desktop\\radar\\20250319\\Image (6).jpg",
+      "timestamp_readable": "2026-02-19T20:46:18.597615",
+      "timestamp_display": "2026-02-19 20:46:18",
+      "time_source": "File Modified",
+      "file_modified": "2026-02-19 20:46:18",
+      "exif_datetime": "No EXIF data"
+    },
+    "Image (7).jpg": {
+      "file_path": "c:\\Users\\Siddhartha Reddy\\Desktop\\radar\\20250319\\Image (7).jpg",
+      "timestamp_readable": "2026-02-19T20:46:18.615334",
+      "timestamp_display": "2026-02-19 20:46:18",
+      "time_source": "File Modified",
+      "file_modified": "2026-02-19 20:46:18",
+      "exif_datetime": "No EXIF data"
+    },
+    "Image (8).jpg": {
+      "file_path": "c:\\Users\\Siddhartha Reddy\\Desktop\\radar\\20250319\\Image (8).jpg",
+      "timestamp_readable": "2026-02-19T20:46:18.619363",
+      "timestamp_display": "2026-02-19 20:46:18",
+      "time_source": "File Modified",
+      "file_modified": "2026-02-19 20:46:18",
+      "exif_datetime": "No EXIF data"
+    },
+    "Image (9).jpg": {
+      "file_path": "c:\\Users\\Siddhartha Reddy\\Desktop\\radar\\20250319\\Image (9).jpg",
+      "timestamp_readable": "2026-02-19T20:46:18.621379",
+      "timestamp_display": "2026-02-19 20:46:18",
+      "time_source": "File Modified",
+      "file_modified": "2026-02-19 20:46:18",
+      "exif_datetime": "No EXIF data"
+    }
+  },
+  "csv_data": {
+    "202503019_GH_exposed_corn_ear_cls001.csv": {
+      "min_timestamp": {
+        "unix": 1742398075.75,
+        "readable": "2025-03-19 20:57:55.750",
+        "display": "2025-03-19 20:57:55"
+      },
+      "max_timestamp": {
+        "unix": 1742398091.663,
+        "readable": "2025-03-19 20:58:11.663",
+        "display": "2025-03-19 20:58:11"
+      },
+      "total_records": 391,
+      "sample_timestamps": [
+        {
+          "unix": 1742398075.75,
+          "readable": "2025-03-19 20:57:55.750",
+          "display": "2025-03-19 20:57:55"
+        },
+        {
+          "unix": 1742398075.781,
+          "readable": "2025-03-19 20:57:55.781",
+          "display": "2025-03-19 20:57:55"
+        },
+        {
+          "unix": 1742398075.781,
+          "readable": "2025-03-19 20:57:55.781",
+          "display": "2025-03-19 20:57:55"
+        },
+        {
+          "unix": 1742398075.798,
+          "readable": "2025-03-19 20:57:55.798",
+          "display": "2025-03-19 20:57:55"
+        },
+        {
+          "unix": 1742398075.907,
+          "readable": "2025-03-19 20:57:55.907",
+          "display": "2025-03-19 20:57:55"
+        }
+      ]
+    },
+    "202503019_GH_exposed_corn_ear_far002.csv": {
+      "min_timestamp": {
+        "unix": 1742398265.84,
+        "readable": "2025-03-19 21:01:05.840",
+        "display": "2025-03-19 21:01:05"
+      },
+      "max_timestamp": {
+        "unix": 1742398294.023,
+        "readable": "2025-03-19 21:01:34.023",
+        "display": "2025-03-19 21:01:34"
+      },
+      "total_records": 707,
+      "sample_timestamps": [
+        {
+          "unix": 1742398265.84,
+          "readable": "2025-03-19 21:01:05.840",
+          "display": "2025-03-19 21:01:05"
+        },
+        {
+          "unix": 1742398265.887,
+          "readable": "2025-03-19 21:01:05.887",
+          "display": "2025-03-19 21:01:05"
+        },
+        {
+          "unix": 1742398265.903,
+          "readable": "2025-03-19 21:01:05.903",
+          "display": "2025-03-19 21:01:05"
+        },
+        {
+          "unix": 1742398265.903,
+          "readable": "2025-03-19 21:01:05.903",
+          "display": "2025-03-19 21:01:05"
+        },
+        {
+          "unix": 1742398266.013,
+          "readable": "2025-03-19 21:01:06.013",
+          "display": "2025-03-19 21:01:06"
+        }
+      ]
+    },
+    "202503019_GH_hidden_corn_ear_cls005.csv": {
+      "min_timestamp": {
+        "unix": 1742398622.931,
+        "readable": "2025-03-19 21:07:02.931",
+        "display": "2025-03-19 21:07:02"
+      },
+      "max_timestamp": {
+        "unix": 1742398641.787,
+        "readable": "2025-03-19 21:07:21.787",
+        "display": "2025-03-19 21:07:21"
+      },
+      "total_records": 479,
+      "sample_timestamps": [
+        {
+          "unix": 1742398622.931,
+          "readable": "2025-03-19 21:07:02.931",
+          "display": "2025-03-19 21:07:02"
+        },
+        {
+          "unix": 1742398623.025,
+          "readable": "2025-03-19 21:07:03.025",
+          "display": "2025-03-19 21:07:03"
+        },
+        {
+          "unix": 1742398623.025,
+          "readable": "2025-03-19 21:07:03.025",
+          "display": "2025-03-19 21:07:03"
+        },
+        {
+          "unix": 1742398623.04,
+          "readable": "2025-03-19 21:07:03.040",
+          "display": "2025-03-19 21:07:03"
+        },
+        {
+          "unix": 1742398623.056,
+          "readable": "2025-03-19 21:07:03.056",
+          "display": "2025-03-19 21:07:03"
+        }
+      ]
+    },
+    "202503019_GH_hidden_corn_ear_far004.csv": {
+      "min_timestamp": {
+        "unix": 1742398560.316,
+        "readable": "2025-03-19 21:06:00.316",
+        "display": "2025-03-19 21:06:00"
+      },
+      "max_timestamp": {
+        "unix": 1742398583.802,
+        "readable": "2025-03-19 21:06:23.802",
+        "display": "2025-03-19 21:06:23"
+      },
+      "total_records": 590,
+      "sample_timestamps": [
+        {
+          "unix": 1742398560.316,
+          "readable": "2025-03-19 21:06:00.316",
+          "display": "2025-03-19 21:06:00"
+        },
+        {
+          "unix": 1742398560.395,
+          "readable": "2025-03-19 21:06:00.395",
+          "display": "2025-03-19 21:06:00"
+        },
+        {
+          "unix": 1742398560.41,
+          "readable": "2025-03-19 21:06:00.410",
+          "display": "2025-03-19 21:06:00"
+        },
+        {
+          "unix": 1742398560.41,
+          "readable": "2025-03-19 21:06:00.410",
+          "display": "2025-03-19 21:06:00"
+        },
+        {
+          "unix": 1742398560.52,
+          "readable": "2025-03-19 21:06:00.520",
+          "display": "2025-03-19 21:06:00"
+        }
+      ]
+    },
+    "202503019_GH_stock_cls006.csv": {
+      "min_timestamp": {
+        "unix": 1742398754.198,
+        "readable": "2025-03-19 21:09:14.198",
+        "display": "2025-03-19 21:09:14"
+      },
+      "max_timestamp": {
+        "unix": 1742398773.331,
+        "readable": "2025-03-19 21:09:33.331",
+        "display": "2025-03-19 21:09:33"
+      },
+      "total_records": 475,
+      "sample_timestamps": [
+        {
+          "unix": 1742398754.198,
+          "readable": "2025-03-19 21:09:14.198",
+          "display": "2025-03-19 21:09:14"
+        },
+        {
+          "unix": 1742398754.276,
+          "readable": "2025-03-19 21:09:14.276",
+          "display": "2025-03-19 21:09:14"
+        },
+        {
+          "unix": 1742398754.292,
+          "readable": "2025-03-19 21:09:14.292",
+          "display": "2025-03-19 21:09:14"
+        },
+        {
+          "unix": 1742398754.292,
+          "readable": "2025-03-19 21:09:14.292",
+          "display": "2025-03-19 21:09:14"
+        },
+        {
+          "unix": 1742398754.417,
+          "readable": "2025-03-19 21:09:14.417",
+          "display": "2025-03-19 21:09:14"
+        }
+      ]
+    },
+    "202503019_GH_stock_far007.csv": {
+      "min_timestamp": {
+        "unix": 1742398935.456,
+        "readable": "2025-03-19 21:12:15.456",
+        "display": "2025-03-19 21:12:15"
+      },
+      "max_timestamp": {
+        "unix": 1742398956.349,
+        "readable": "2025-03-19 21:12:36.349",
+        "display": "2025-03-19 21:12:36"
+      },
+      "total_records": 552,
+      "sample_timestamps": [
+        {
+          "unix": 1742398935.456,
+          "readable": "2025-03-19 21:12:15.456",
+          "display": "2025-03-19 21:12:15"
+        },
+        {
+          "unix": 1742398935.534,
+          "readable": "2025-03-19 21:12:15.534",
+          "display": "2025-03-19 21:12:15"
+        },
+        {
+          "unix": 1742398935.55,
+          "readable": "2025-03-19 21:12:15.550",
+          "display": "2025-03-19 21:12:15"
+        },
+        {
+          "unix": 1742398935.55,
+          "readable": "2025-03-19 21:12:15.550",
+          "display": "2025-03-19 21:12:15"
+        },
+        {
+          "unix": 1742398935.66,
+          "readable": "2025-03-19 21:12:15.660",
+          "display": "2025-03-19 21:12:15"
+        }
+      ]
+    }
+  },
+  "image_to_csv_closest": [
+    {
+      "image": "Image (11).jpg",
+      "image_timestamp": "2026-02-19 20:46:18",
+      "time_source": "File Modified",
+      "closest_csv_file": "202503019_GH_stock_far007.csv",
+      "closest_csv_timestamp": "2025-03-19 21:12:15.660",
+      "time_difference_seconds": 29115242.937615
+    },
+    {
+      "image": "Image (5).jpg",
+      "image_timestamp": "2026-02-19 20:46:18",
+      "time_source": "File Modified",
+      "closest_csv_file": "202503019_GH_stock_far007.csv",
+      "closest_csv_timestamp": "2025-03-19 21:12:15.660",
+      "time_difference_seconds": 29115242.937615
+    },
+    {
+      "image": "Image (6).jpg",
+      "image_timestamp": "2026-02-19 20:46:18",
+      "time_source": "File Modified",
+      "closest_csv_file": "202503019_GH_stock_far007.csv",
+      "closest_csv_timestamp": "2025-03-19 21:12:15.660",
+      "time_difference_seconds": 29115242.937615
+    },
+    {
+      "image": "Image (7).jpg",
+      "image_timestamp": "2026-02-19 20:46:18",
+      "time_source": "File Modified",
+      "closest_csv_file": "202503019_GH_stock_far007.csv",
+      "closest_csv_timestamp": "2025-03-19 21:12:15.660",
+      "time_difference_seconds": 29115242.955334
+    },
+    {
+      "image": "Image (8).jpg",
+      "image_timestamp": "2026-02-19 20:46:18",
+      "time_source": "File Modified",
+      "closest_csv_file": "202503019_GH_stock_far007.csv",
+      "closest_csv_timestamp": "2025-03-19 21:12:15.660",
+      "time_difference_seconds": 29115242.959363
+    },
+    {
+      "image": "Image (9).jpg",
+      "image_timestamp": "2026-02-19 20:46:18",
+      "time_source": "File Modified",
+      "closest_csv_file": "202503019_GH_stock_far007.csv",
+      "closest_csv_timestamp": "2025-03-19 21:12:15.660",
+      "time_difference_seconds": 29115242.961379
+    }
+  ]
+}

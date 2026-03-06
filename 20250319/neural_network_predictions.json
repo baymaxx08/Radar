@@ -1,0 +1,176 @@
+{
+  "training_summary": {
+    "total_samples": 3037,
+    "training_samples": 2429,
+    "test_samples": 608,
+    "model_accuracy": 0.774671052631579,
+    "training_date": "2026-03-01T16:53:32.608335",
+    "signal_length": 480
+  },
+  "file_analysis": {
+    "202503019_GH_exposed_corn_ear_cls001.csv": {
+      "category": "exposed",
+      "records": 382,
+      "sample_size": 480
+    },
+    "202503019_GH_exposed_corn_ear_far002.csv": {
+      "category": "exposed",
+      "records": 678,
+      "sample_size": 480
+    },
+    "202503019_GH_hidden_corn_ear_cls005.csv": {
+      "category": "hidden",
+      "records": 453,
+      "sample_size": 480
+    },
+    "202503019_GH_hidden_corn_ear_far004.csv": {
+      "category": "hidden",
+      "records": 564,
+      "sample_size": 480
+    },
+    "202503019_GH_stock_cls006.csv": {
+      "category": "stock",
+      "records": 459,
+      "sample_size": 480
+    },
+    "202503019_GH_stock_far007.csv": {
+      "category": "stock",
+      "records": 501,
+      "sample_size": 480
+    }
+  },
+  "predictions": [
+    {
+      "csv_file": "202503019_GH_exposed_corn_ear_cls001.csv",
+      "ground_truth_category": "exposed",
+      "ground_truth_label": 0,
+      "total_records": 382,
+      "predictions": {
+        "exposed_count": 382,
+        "hidden_count": 0,
+        "stock_count": 0,
+        "exposed_percent": 100.0,
+        "hidden_percent": 0.0,
+        "stock_percent": 0.0
+      },
+      "average_confidence": 0.7842700481414795,
+      "confidence_range": [
+        0.35111165046691895,
+        1.0
+      ],
+      "predicted_majority_class": "exposed",
+      "predicted_majority_label": 0,
+      "matches_ground_truth": true
+    },
+    {
+      "csv_file": "202503019_GH_exposed_corn_ear_far002.csv",
+      "ground_truth_category": "exposed",
+      "ground_truth_label": 0,
+      "total_records": 678,
+      "predictions": {
+        "exposed_count": 678,
+        "hidden_count": 0,
+        "stock_count": 0,
+        "exposed_percent": 100.0,
+        "hidden_percent": 0.0,
+        "stock_percent": 0.0
+      },
+      "average_confidence": 0.7837039232254028,
+      "confidence_range": [
+        0.35111165046691895,
+        1.0
+      ],
+      "predicted_majority_class": "exposed",
+      "predicted_majority_label": 0,
+      "matches_ground_truth": true
+    },
+    {
+      "csv_file": "202503019_GH_hidden_corn_ear_cls005.csv",
+      "ground_truth_category": "hidden",
+      "ground_truth_label": 1,
+      "total_records": 453,
+      "predictions": {
+        "exposed_count": 151,
+        "hidden_count": 302,
+        "stock_count": 0,
+        "exposed_percent": 33.333333333333336,
+        "hidden_percent": 66.66666666666667,
+        "stock_percent": 0.0
+      },
+      "average_confidence": 0.7837038040161133,
+      "confidence_range": [
+        0.35111165046691895,
+        1.0
+      ],
+      "predicted_majority_class": "hidden",
+      "predicted_majority_label": 1,
+      "matches_ground_truth": true
+    },
+    {
+      "csv_file": "202503019_GH_hidden_corn_ear_far004.csv",
+      "ground_truth_category": "hidden",
+      "ground_truth_label": 1,
+      "total_records": 564,
+      "predictions": {
+        "exposed_count": 188,
+        "hidden_count": 376,
+        "stock_count": 0,
+        "exposed_percent": 33.333333333333336,
+        "hidden_percent": 66.66666666666667,
+        "stock_percent": 0.0
+      },
+      "average_confidence": 0.7837039232254028,
+      "confidence_range": [
+        0.35111165046691895,
+        1.0
+      ],
+      "predicted_majority_class": "hidden",
+      "predicted_majority_label": 1,
+      "matches_ground_truth": true
+    },
+    {
+      "csv_file": "202503019_GH_stock_cls006.csv",
+      "ground_truth_category": "stock",
+      "ground_truth_label": 2,
+      "total_records": 459,
+      "predictions": {
+        "exposed_count": 153,
+        "hidden_count": 0,
+        "stock_count": 306,
+        "exposed_percent": 33.333333333333336,
+        "hidden_percent": 0.0,
+        "stock_percent": 66.66666666666667
+      },
+      "average_confidence": 0.7837038636207581,
+      "confidence_range": [
+        0.35111165046691895,
+        1.0
+      ],
+      "predicted_majority_class": "stock",
+      "predicted_majority_label": 2,
+      "matches_ground_truth": true
+    },
+    {
+      "csv_file": "202503019_GH_stock_far007.csv",
+      "ground_truth_category": "stock",
+      "ground_truth_label": 2,
+      "total_records": 501,
+      "predictions": {
+        "exposed_count": 167,
+        "hidden_count": 0,
+        "stock_count": 334,
+        "exposed_percent": 33.333333333333336,
+        "hidden_percent": 0.0,
+        "stock_percent": 66.66666666666667
+      },
+      "average_confidence": 0.7837038040161133,
+      "confidence_range": [
+        0.35111165046691895,
+        1.0
+      ],
+      "predicted_majority_class": "stock",
+      "predicted_majority_label": 2,
+      "matches_ground_truth": true
+    }
+  ]
+}
